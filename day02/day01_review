@@ -126,9 +126,10 @@ name = 'jun'
 print(age)
 print(money)
 
-if name - 'alex' and money > 10:    # False and True -> if False와 같다.
+if name == 'alex' and money > 10:    # False and True -> if False와 같다.
     print('부자 alex, 안녕하세요')
 elif name == 'alex': # False
     print('그냥 alex, 안녕하세요!')
 else:
     print('누구세요?')
+
