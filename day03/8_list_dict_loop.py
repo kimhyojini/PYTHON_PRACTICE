@@ -1,0 +1,26 @@
+# 리스트, 딕셔너리, 반복문
+
+names = ['kyle', 'alex', 'justin']
+
+#enumerate
+#딕셔너리의 items 메서드 처럼 인덱스와 값을 한번에 받기 가능
+for idx, name in enumerate(names):
+    print(idx, name)
+
+#컴프리헨션 (comprehension)
+
+#기본
+#컴프리핸션 쓰지 않았을때
+squares = []
+for i in range(1,6):
+    squares.append(i **2)
+
+print(squares)
+
+#리스트 컴프리핸션 사용
+
+squares = [1 **2 for i in range (1,6)]
+print(squares)
+
+squares = [i **2 for i in range(1,6) if i % 2 ==0]
+print(squares)
