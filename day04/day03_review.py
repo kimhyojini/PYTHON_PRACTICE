@@ -97,4 +97,141 @@ print(condition1 and condition2) #이렇게 표현할 수도 있음 위에것과
 
 # 논리연산의 단축평가 
 age = 20
-print(age == 100 and djflkjasdfkjslk)
+print(age == 100 and djflkjasdfkjslk) #뒤에는 상관없이 False가 나옴, 왜냐하면 age는 20이니까!
+# False and 정의되지 않은 변수 
+# -> 필요이상의 연산 X, 바로 거짓 반환
+
+print('=====조건문과 반복문=====')
+
+# 조건문
+    # 핵심 질문 : 특정 조건이 맞는가?
+    # 실행 횟수 : 딱 1번
+    # 판단 기준 : 논리 조건 (True, False)
+
+
+score = 30
+
+print('~조건문 시작~')
+if score >= 60:
+    print('합격')
+elif score >= 50:
+    print('예비합격')
+else:
+    print('불합격')
+print('~ 조건문 끝~')
+
+# 반복문 
+    # 핵심 질문 :  몇 번 반복할 것인가?
+    # 실행 횟수 :  여러번
+    # 판단 기준 : 데이터의 갯수(for 문), 조건(while 문)
+scores = [70,20,50,90,10]
+
+print('~ 반복문 시작 ~')
+for score in scores:
+    print(score)
+print('~반복문 끝~')
+
+# 조건문=판단, 반복문=처리량
+
+# 조건문 + 반복문 = 강력한 코드
+scores = [70,20,50,90,10]
+
+for score in scores:
+    if score >= 60:
+        print('합격')
+    elif score >= 50:
+        print('예비합격')
+    else:
+        print('불합격')
+        
+# 반복문의 종류
+# 언제 무엇을 사용해야 하는가?
+
+# for문 : 반복 횟수가 정해진 반복문
+# while문 : 반복 횟수가 정해지지 않은 반복문
+
+# for문 
+    # 사용 기준 : 반복 횟수가 명확할때 사용
+    # 사용처 :  컨테이너 자료형의 순회 (리스트, 딕셔너리, 문자열, range ...)
+    # 안정성 : 높음
+    
+for i in range (5) : #정수목록
+    print(i)
+    
+# while문
+    # 사용기준: 종료 조건이 좀더 중요
+    # 사용처: 상태 변화 추적하면서 반복해야만 할때 
+    # 안정성: 낮음(주의!) -> 무한 루프 가능성 존재
+
+
+number = 1
+while number < 5:
+    # print(number) #while문을 변경시킬 수 있는 코드를 print에 적지 않았기 때문에 무한으로 루프가 생성됨 -> ctrl+c로 나와야함
+    number += 1 #조건에 대한 증감식
+    
+
+# print('=====컨테이너의 자료형 비교=====')
+# 자료형	핵심 목적	순서	중복	수정	접근 방식	대표 사용 상황
+# 리스트	여러 값을 순서대로 관리	O	O	O	인덱스	데이터 행, 시계열, 반복 처리
+# 튜플	변하지 않는 묶음	O	O	X	인덱스	좌표, 설정값, 함수 반환
+# 집합	중복 제거 & 포함 여부 판단	X	X	O	포함 여부	중복 제거, 교집합/차집합
+# 딕셔너리	이름-값 매핑	X (3.7+ 입력순서 유지)	키 X	O	키	데이터 레코드, JSON
+
+# 1.리스트 튜플
+#리스트 [] 
+    #핵심 목적: 여러 값을 순서대로 관리
+    # 순서 : 존재함 ㅇㅇ
+    # 수정 : 가능  #누군가는 이 자료를 바꿀 수 있음
+    # 접근 방식 : 인덱스 [위치기반]
+
+numbers = [1,2,3,4,5,6,6,6,6,6,6,6]
+print(numbers)
+numbers[0]=10
+
+
+# 튜플 ()
+    #핵심목적: 변하지 않는 묶음 
+    # 순서: 0
+    # 수정: x
+    # 중복 :o
+    # 접근 방식: 인덱스(위치기반)
+    
+numbers = (1,2,3,3)
+print(numbers)
+
+print(numbers[0])
+# numbers[0] = 10 #TypeError
+
+# 집합 {}
+    # 핵심목적 : 중복이 되지 않음 xx
+    # 순서 : x존재하지 않음
+    # 수정: 가능가능! o
+    # 접근 방식: 인덱스로 불가능, 포함 여부 확인 가능(멤버십 연산자) 
+
+numbers = {1,2,3,4,5}
+print(numbers) 
+
+# numbers[0]  #TypeError: 'set' object is not subscriptable라고 뜨면서, 순서를 제공하지 않음을 보여줌 
+
+print(1 in numbers)
+numbers.add(10000) #순서가 없고, add를 한다고 해서 가장 뒤에온다거나 앞에온다거나 하는것이 보장되지 않음
+print(numbers) 
+
+# 딕셔너리 {}
+    # 사용목적:  키-값 매핑하여 사용
+    # 순서: 엄밀하게 X (단, 파이썬 3.7이상인 경우에는 입력순서를 유지하는 경향성이 있긴함)
+    # 수정: 가능함 O
+    # 중복: X 키가 중복되지 않는다.
+    # 접근방식: key
+
+user = {'name':'jun','age':30,'is_male' : True}
+
+
+user['city'] = 'seoul' #수정이 가능하기 때문에, 위에 적혀있는거 외에 서울이 key값에 추가됨
+user['city'] = 'busan' #중복은 불가능하고, 재할당이 되게됨 ->서울은 사라지도 부산만 나오는것임
+user['lisense'] = True
+
+print(user)
+
+for k in user. keys():
+    print(user[k])
