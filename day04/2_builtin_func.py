@@ -36,3 +36,21 @@ def sum_func(container):
     return answer
 
 print(sum_func(numbers))
+
+# sorted
+
+# users = {
+#     'name': ['jun','alex','chelsea']
+#     'age':[21]} 
+
+
+#내장함수 
+#컨테이너자료형의 각원소에 함소를 적용한 후, 그 결과를 반환
+number_str = '12345'
+number_lst = list(number_str)
+numbers = []
+for n in number_lst:
+    numbers.append(int(n))
+print(numbers)
+
+map(int,number_str)
