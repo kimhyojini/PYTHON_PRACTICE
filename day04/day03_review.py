@@ -229,9 +229,71 @@ user = {'name':'jun','age':30,'is_male' : True}
 
 user['city'] = 'seoul' #수정이 가능하기 때문에, 위에 적혀있는거 외에 서울이 key값에 추가됨
 user['city'] = 'busan' #중복은 불가능하고, 재할당이 되게됨 ->서울은 사라지도 부산만 나오는것임
-user['lisense'] = True
+user['lisense'] = True #값은 중복 가능, 같을 수 있음 true가 두번나오듯이, 키가 다르니까 상관없는것임
 
 print(user)
 
 for k in user. keys():
     print(user[k])
+    
+# 리스트 [] vs 튜플 ()
+point = [10,20,30]
+point[0] = 99 #가능
+print(point)
+
+# 튜플ㅣ 실수방지 -> 이건 바뀌면 안된다는 신호
+#point = (10,20,30)
+#point[0] = 99 #TypeError: 'tuple' object does not support item assignment이렇게 나옴 불가능
+
+# 리스트 [] vs 집합 {}
+# 의문점: 리스트를 그냥 사용하고, 중복만 없으면 되는거 아닌가요?
+
+#리스트는 데이터 보관을 목적으로 한다.
+names = ['A','B','C','D','A','C']
+print(names)
+
+#집합은 조건 판단 도구로 활용
+names_set= set(names)
+print(names_set)
+print(len(names_set))
+# => 방문자 여러번 방문 len을 통해 교집합등을 정리해야함 6명이 아니라 겹치는걸 제외하고 4명이 되는것임  
+# => DAU 등 유저 한명이 두번접속했다고해서 , 두명으로 잡히지 않도록 이럴때 집합을 활용하는 것임
+
+# 리스트 [] VS딕셔너리 {key:value}
+#리스트: 순서를 알아야 의미가 있음
+user = ['jun',25,'개발자',True]
+print(user)
+
+#딕셔너리: 의미가 코드에 그대로 드러남,더 많은 부연설명을 할 필요가 없음 
+user = {'name':'jun',
+        'age':25,
+        'occupation':'개발자',
+        'live_seoul': True}
+print(user)
+
+#['jun', 25, '개발자', True]
+#{'name': 'jun', 'age': 25, 'occupation': '개발자', 'live_seoul': True} 이렇게 각각 결과값이 나오는 것임!!
+
+# 반복문 +컨테이너
+numbers = [1,2,3,4,5]  #얘는 1,2,3여기를 보여줌 
+for variable in numbers:
+    print(variable)
+    
+user = {'name':'jun',  #딕셔너리의 경우 똑같은 형태처럼 보이지만, 키값만 보여준다 ->key만 할당
+        'age':25,
+        'occupation':'개발자',
+        'live_seoul': True}
+for variable in user:
+    print(variable)   
+    
+for k,v in user.items(): #각각 키와밸류 모두를 꺼내고 싶으면 이 수식을 사용해야 한다.-> 한쌍을 그대로 
+    print(k,v)
+
+tags = ['python','data','bi','sql']  #집합: 집합적 성격을 띄고 있기에, 중복하려고 해도 중복은 안된다.
+print(tags)
+
+tags.add('python')
+print(tags)
+
+for tag in tags:
+    print(tag)
