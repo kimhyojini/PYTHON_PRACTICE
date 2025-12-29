@@ -4,6 +4,16 @@
 emails = ['abc@naver.com', 'def@gmail.com', 'ghi@naver.com', 'jkl@daum.net', 'mno@gmail.com']
 
 # 로직 작성
+domains =[]
+for email in emails:
+    domain = email.split('@')[1]
+    domains.append(domain)
+
+unique_domains = list(set(domains))
+
+unique_domains.sort()
+
+print(unique_domains)
 
 
 

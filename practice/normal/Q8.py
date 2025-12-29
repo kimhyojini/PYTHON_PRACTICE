@@ -15,6 +15,23 @@ books = [
 
 # 로직 작성 (sorted() 또는 sort() 함수와 lambda를 활용하세요)
 
+#2회독
+sorted_books = sorted(books, key=lambda x : (-x['loans'],-x['year']))
+
+for book in sorted_books:
+    print(f"{book[title]} (대출:{book['loans']}, 연도:{book['year']})")
+
+
+
+
+
+
+
+
+#답안
+sorted_books = sorted(books, key=lambda x: (-x['loans'], -x['year']))
+for book in sorted_books:
+    print(f"{book['title']})(대출:{book['loans']},연도:{book['year']}")
 
 
 # print(sorted_books)

@@ -22,8 +22,15 @@ for user in users['information']:
 print(names)
 
 
-scores = [10,20,30,40,50,60,700,90, 80, 70]
+# scores = [10,20,30,40,50,60,700,90, 80, 70]
 
-print(scores[-2])
-scores[3]=400
-print(scores)
+# #()과[]의 차이점 확인
+# print(scores[-2])
+# scores[3]=400
+# print(scores)
+
+# #[]더 깊게 이해하기 
+# user = {'name': 'alex', 'age': 20}
+# user = 
+# print(user['name'])  # alex
+# print(user['age'])   # 20
