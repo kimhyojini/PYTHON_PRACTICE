@@ -81,5 +81,5 @@ print(numbers_1+numbers_2)
 # numbers[1] = -1 #TypeError: 'tuple' object does not support item assignment이라고 나오면서 안됨
 
 #추가
-numbers.append(60)
+#numbers.append(60) #'tuple' object has no attribute 'append'이라고 나옴
 

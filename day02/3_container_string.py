@@ -18,4 +18,6 @@ print(subject[-1])
 # 특징2: 불변자료형(immutable)
 # 불가능하다, 변경이
 
-subject[0] = 'P'
+# subject[0] = 'P' ->-> #TypeError: 'str' object does not support item assignment 이런 에러 메세지 발생시킴
+
+print(subject[1:])

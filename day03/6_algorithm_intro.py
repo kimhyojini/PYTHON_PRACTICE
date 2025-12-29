@@ -35,3 +35,8 @@ for gem in gems:
     grade_dict[gem] += 1
 
 print(grade_dict)
+
+
+# 등급이 정해져 있지 않은 상황
+grade_dict= {}
+

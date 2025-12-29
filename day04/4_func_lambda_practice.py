@@ -13,5 +13,5 @@ nums = sorted(nums, key=lambda x:(x[1], -x[0]))
 print(nums)
 
 def solution(x):
-    return x, x**2
+    return (x, x**2)
 print(solution(3))

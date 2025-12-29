@@ -37,9 +37,11 @@ def print_stars(n):
     pass
 
 def print_stars(N):
-    for i in range(1, N+1) :
-        print('*' * i)
-  
+    for i in range(1, N+1) : #반복하여, 한줄씩 찍기
+        print('*' * i) # 별 N개를 출력하기 위해 문자열 "*"곱하기 연산
+        # i = 1/ "*"*1 => "*"
+        # i = 2/ "*"*2 => "*"
+        # i = 3/ "*"*3 => "*"
 print_stars(N)
 
 

@@ -296,4 +296,6 @@ tags.add('python')
 print(tags)
 
 for tag in tags:
-    print(tag)
+    print(tag)   #순서가 없기 떄문에 무작위로 불러와 짐
+    
+# 같은 for문인데, 자료형에 따라 꺼내는 단위가 달라진다!

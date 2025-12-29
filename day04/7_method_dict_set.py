@@ -51,3 +51,10 @@ print(numbers_1) #중복을 허락하지 않음
 numbers_1.remove(10000)
 print(numbers_1)
 #삭제 
+
+
+#여러 값 추가 : update(
+#
+
+numbers_1.update([10,20,30])
+print(numbers_1)

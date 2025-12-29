@@ -54,3 +54,8 @@ for n in number_lst:
 print(numbers)
 
 map(int,number_str)
+
+#방법2
+numbers = list(map(int,number_str))
+print(numbers)
+# => 대안이 있다면 , 더편한 방식선택해서 할것 햣 

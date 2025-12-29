@@ -57,4 +57,4 @@ print(numbers[1:3])
 print(numbers[5:2:-1])
 
 # 리스트 뒤집기
-print(numbers[: : -1])
+print(numbers[: : -1]) #리스트를 뒤집는 pythonic 한 방법 

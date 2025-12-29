@@ -23,3 +23,5 @@ example = [(0,2),(3,5),(1,4),(0,-1)] #뒤에 있는 녀석을 기준으로 정�
 
 example_new = sorted(example, key=lambda x:x[1])
 print(example_new)
+
+print(type(example))

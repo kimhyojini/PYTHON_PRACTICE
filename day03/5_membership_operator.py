@@ -30,4 +30,11 @@ colors = {'Red':'빨강',
 # 질문
 print('빨강' in colors) #False 
 
-print('Red' in colors)
+print('Red' in colors) #True
+# => key 모음에 포함될 때만 True라고 함
+
+# values에서 존재여부를 검사하고 싶을 때,
+# colors.valures() 메소드 사용하며 된다!
+print(colors.valures())
+
+print('빨강' in colors.values())
