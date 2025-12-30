@@ -3,6 +3,15 @@
 # ex) [7, 2, 3]의 경우 [14, 4, 6]이 되어야 합니다.
 nums = [7, 2, 9, 8, 4, 3, 5]
 
+double_nums= []
+for num in nums:
+    double_nums.append(num*2)
+    
+print(double_nums)
+
+
+
+
 
 # for num in nums: 
 #     nums.append(num*2)

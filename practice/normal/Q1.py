@@ -3,6 +3,17 @@
 # ex) 3.1724일 경우 3을 출력
 nums = [1, 7, 2, 3, 6, 1, 2, 5, 3, 4, 8, 7]
 
+mean = sum(nums)/len(nums)
+answer = int(mean)
+print(answer)
+
+
+
+
+
+
+
+
 mean=sum(nums)/len(nums)
 answer=int(mean)
 print(answer)

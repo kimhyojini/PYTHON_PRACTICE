@@ -8,6 +8,12 @@ users = {
         {'name': 'peter', 'age': 4, 'license': False}
     ]
 }
+names=[]
+for user in users['information']:
+    names.append(user['name'])
+print(names)
+
+
 
 names = []
 # 로직 작성
